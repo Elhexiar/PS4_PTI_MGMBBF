@@ -8,10 +8,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody rb;
 
     [Header(">> Inputs")]
-    public KeyCode forward;
-    public KeyCode backward;
-    public KeyCode left;
-    public KeyCode right;
+    public KeyCode forward = KeyCode.W;
+    public KeyCode backward = KeyCode.S;
+    public KeyCode left = KeyCode.A;
+    public KeyCode right = KeyCode.D;
 
     [Header(">> PlayerMovement")]
     public float maxSpeed;
@@ -29,11 +29,14 @@ public class PlayerMovement : MonoBehaviour
     public float maxAngleUp;
     public float maxAngleDown;
     public bool headTilting;
+    public bool reverseHeadTilting = true;
+    public float headTiltFactor = 8;
 
     private Transform cameraPos;
     private float targetRotationY;
     private float targetRotationX;
     private bool isMouseLocked = true;
+    private float oldTargetRotation;
 
     [Header(">> Advanced Rotation Parameter")]
     public float rotationSpeedX;
@@ -57,7 +60,6 @@ public class PlayerMovement : MonoBehaviour
         if (rotationSpeedY == 0) { rotationSpeedY = rotationSpeedGlobal; }
         if (rotationSmoothnessX == 0) { rotationSmoothnessX = rotationSmoothnessGlobal; }
         if (rotationSmoothnessY == 0) { rotationSmoothnessY = rotationSmoothnessGlobal; }
-
     }
 
     private void Update()
@@ -101,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
             // === apply roatation to player ===
             // get input on X axis
             float mouseX = Input.GetAxis("Mouse X");
-
             // get targeted rotation
             targetRotationY += mouseX * rotationSpeedY * Time.deltaTime;
 
@@ -110,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Apply rotation to player
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, smoothedRotationY, transform.eulerAngles.z);
+
 
             // === apply roatation to camera ===
             // get input on Y axis
@@ -122,8 +124,18 @@ public class PlayerMovement : MonoBehaviour
             // smooth rotation
             float smoothedRotationX = Mathf.LerpAngle(cameraPos.eulerAngles.x, targetRotationX, rotationSmoothnessX * Time.deltaTime);
 
+            // Head Tilting 
+            float headTilt = transform.eulerAngles.z;
+            if (headTilting )
+            {
+                headTilt = (targetRotationY - transform.eulerAngles.y) / headTiltFactor; // distance between targeted rotation and actual rotation divided by X    ! ! BUGED ! ! 
+                if (reverseHeadTilting) { headTilt = headTilt  * -1; }
+                Debug.Log(headTilt);
+            }
+            //headTilt = Mathf.Clamp(headTilt, -90, 90);
+
             // Apply rotation to cam
-            cameraPos.eulerAngles = new Vector3(smoothedRotationX, smoothedRotationY, cameraPos.eulerAngles.z);
+            cameraPos.eulerAngles = new Vector3(smoothedRotationX,cameraPos.eulerAngles.y , headTilt);
         }
     }
 }
