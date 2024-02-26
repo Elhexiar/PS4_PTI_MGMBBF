@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private float targetRotationX;
     private bool isMouseLocked = true;
     private float oldTargetRotation;
+    private float coordRotation;
 
     [Header(">> Advanced Rotation Parameter")]
     public float rotationSpeedX;
@@ -128,12 +129,12 @@ public class PlayerMovement : MonoBehaviour
             float headTilt = transform.eulerAngles.z;
             if (headTilting )
             {
-                headTilt = (targetRotationY - transform.eulerAngles.y) / headTiltFactor; // distance between targeted rotation and actual rotation divided by X    ! ! BUGED ! ! 
+                if (oldTargetRotation != transform.eulerAngles.y) { coordRotation -= oldTargetRotation - transform.eulerAngles.y; oldTargetRotation = transform.eulerAngles.y; } // << PB
+                         
+                headTilt = targetRotationY - coordRotation ; // distance between targeted rotation and actual rotation divided by 
                 if (reverseHeadTilting) { headTilt = headTilt  * -1; }
-                Debug.Log(headTilt);
+                Debug.Log(targetRotationY +" // " +  coordRotation);
             }
-            //headTilt = Mathf.Clamp(headTilt, -90, 90);
-
             // Apply rotation to cam
             cameraPos.eulerAngles = new Vector3(smoothedRotationX,cameraPos.eulerAngles.y , headTilt);
         }

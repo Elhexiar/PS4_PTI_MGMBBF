@@ -388,7 +388,7 @@ MonoBehaviour:
   maxAngleDown: 60
   headTilting: 1
   reverseHeadTilting: 1
-  headTiltFactor: 8
+  headTiltFactor: 5
   rotationSpeedX: 0
   rotationSpeedY: 0
   rotationSmoothnessX: 0
