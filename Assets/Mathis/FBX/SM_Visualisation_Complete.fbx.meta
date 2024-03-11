@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3d2fcb5a8dceb524b9e016ca97122076
+guid: 400720bd37d3cc64b9ca031019c0c1e7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -9,16 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: standardSurface1
     second: {fileID: 2100000, guid: 4ffd9acbc874cbd47b027884a178ccea, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface3
-    second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface4
-    second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -52,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
@@ -65,10 +55,10 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     bakeAxisConversion: 0
-    preserveHierarchy: 1
+    preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
@@ -85,8 +75,8 @@ ModelImporter:
     useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
-    normalSmoothAngle: 78
-    normalImportMode: 1
+    normalSmoothAngle: 60
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0

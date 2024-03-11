@@ -16,5 +16,18 @@ public class M_PlayerManager : MonoBehaviour
     void Update()
     {
         
+        if(Input.GetKeyDown(KeyCode.E)) 
+        {
+
+            if(InRangeFocusableProp != null)
+            {
+                InRangeFocusableProp.Interact();
+            }
+
+        }
+        
     }
+
+
+
 }
