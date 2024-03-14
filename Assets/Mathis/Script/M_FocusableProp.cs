@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FocusableProp : MonoBehaviour
+public abstract class M_InteractableProp : MonoBehaviour
 {
-    public M_PlayerManager m_PlayerManager;
+    private M_PlayerManager m_PlayerManager;
 
     public string defaultString = "default";
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorProp : FocusableProp
+public class DoorProp : M_InteractableProp
 {
 
     public override void Interact()
