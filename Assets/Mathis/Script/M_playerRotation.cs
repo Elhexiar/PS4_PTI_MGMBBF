@@ -13,6 +13,7 @@ public class M_playerRotation : M_Manager
     public bool reverseHeadTilting = true;
     public float headTiltFactor = 8;
 
+    [SerializeField]
     private Transform cameraPos;
     private float targetRotationY;
     private float targetRotationX;
@@ -21,14 +22,14 @@ public class M_playerRotation : M_Manager
     private float coordRotation;
 
     [Header(">> Advanced Rotation Parameter")]
-    public float rotationSpeedX;
     public float rotationSpeedY;
-    public float rotationSmoothnessX;
+    public float rotationSpeedX;
     public float rotationSmoothnessY;
+    public float rotationSmoothnessX;
 
     private void Awake()
     {
-        cameraPos = transform.GetChild(0);
+
     }
 
     private void Start()
@@ -37,10 +38,10 @@ public class M_playerRotation : M_Manager
         Cursor.visible = false; // hide cursor
 
         // set data if needed
-        if (rotationSpeedX == 0) { rotationSpeedX = rotationSpeedGlobal; }
         if (rotationSpeedY == 0) { rotationSpeedY = rotationSpeedGlobal; }
-        if (rotationSmoothnessX == 0) { rotationSmoothnessX = rotationSmoothnessGlobal; }
+        if (rotationSpeedX == 0) { rotationSpeedX = rotationSpeedGlobal; }
         if (rotationSmoothnessY == 0) { rotationSmoothnessY = rotationSmoothnessGlobal; }
+        if (rotationSmoothnessX == 0) { rotationSmoothnessX = rotationSmoothnessGlobal; }
     }
 
     // Update is called once per frame
@@ -52,10 +53,10 @@ public class M_playerRotation : M_Manager
             // get input on X axis
             float mouseX = Input.GetAxis("Mouse X");
             // get targeted rotation
-            targetRotationY += mouseX * rotationSpeedY * Time.deltaTime;
+            targetRotationY += mouseX * rotationSpeedX * Time.deltaTime;
 
             // smooth rotation
-            float smoothedRotationY = Mathf.LerpAngle(transform.eulerAngles.y, targetRotationY, rotationSmoothnessY * Time.deltaTime);
+            float smoothedRotationY = Mathf.LerpAngle(transform.eulerAngles.y, targetRotationY, rotationSmoothnessX * Time.deltaTime);
 
             // Apply rotation to player
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, smoothedRotationY, transform.eulerAngles.z);
@@ -66,11 +67,11 @@ public class M_playerRotation : M_Manager
             float mouseY = Input.GetAxis("Mouse Y");
 
             // get targeted rotation
-            targetRotationX -= mouseY * rotationSpeedX * Time.deltaTime;
+            targetRotationX -= mouseY * rotationSpeedY * Time.deltaTime;
             targetRotationX = Mathf.Clamp(targetRotationX, -maxAngleDown, maxAngleUp); // limit vertical Rotation
 
             // smooth rotation
-            float smoothedRotationX = Mathf.LerpAngle(cameraPos.eulerAngles.x, targetRotationX, rotationSmoothnessX * Time.deltaTime);
+            float smoothedRotationX = Mathf.LerpAngle(cameraPos.eulerAngles.x, targetRotationX, rotationSmoothnessY * Time.deltaTime);
 
             // Head Tilting 
             float headTilt = transform.eulerAngles.z;

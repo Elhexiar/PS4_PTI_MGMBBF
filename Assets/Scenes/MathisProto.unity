@@ -2078,7 +2078,6 @@ GameObject:
   m_Component:
   - component: {fileID: 374014291}
   - component: {fileID: 374014294}
-  - component: {fileID: 374014295}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -2113,19 +2112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &374014295
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374014290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36d1163fa822e8b418a0a603ec078d5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Damping: 0
 --- !u!1 &394118826
 GameObject:
   m_ObjectHideFlags: 0
@@ -6738,15 +6724,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeedGlobal: 1
   rotationSmoothnessGlobal: 1
-  maxAngleUp: 35
-  maxAngleDown: 35
+  maxAngleUp: 48.8
+  maxAngleDown: 56.8
   headTilting: 0
   reverseHeadTilting: 0
   headTiltFactor: 8
-  rotationSpeedX: 100
-  rotationSpeedY: 100
-  rotationSmoothnessX: 10
+  cameraPos: {fileID: 1401096513}
+  rotationSpeedY: 300
+  rotationSpeedX: 300
   rotationSmoothnessY: 10
+  rotationSmoothnessX: 10
 --- !u!114 &1109011880
 MonoBehaviour:
   m_ObjectHideFlags: 0
