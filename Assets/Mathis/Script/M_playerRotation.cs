@@ -27,11 +27,6 @@ public class M_playerRotation : M_Manager
     public float rotationSmoothnessY;
     public float rotationSmoothnessX;
 
-    private void Awake()
-    {
-
-    }
-
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; // lock mouse cursor
@@ -42,6 +37,18 @@ public class M_playerRotation : M_Manager
         if (rotationSpeedX == 0) { rotationSpeedX = rotationSpeedGlobal; }
         if (rotationSmoothnessY == 0) { rotationSmoothnessY = rotationSmoothnessGlobal; }
         if (rotationSmoothnessX == 0) { rotationSmoothnessX = rotationSmoothnessGlobal; }
+    }
+
+    public void unlockCurs()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void lockCurs()
+    {
+        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.visible = false; 
     }
 
     // Update is called once per frame
@@ -85,6 +92,12 @@ public class M_playerRotation : M_Manager
             }
             // Apply rotation to cam
             cameraPos.eulerAngles = new Vector3(smoothedRotationX, cameraPos.eulerAngles.y, headTilt);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (Cursor.lockState == CursorLockMode.None) { lockCurs(); }
+            else { unlockCurs(); }
         }
     }
 }
