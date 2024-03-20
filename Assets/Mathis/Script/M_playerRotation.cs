@@ -29,8 +29,7 @@ public class M_playerRotation : M_Manager
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked; // lock mouse cursor
-        Cursor.visible = false; // hide cursor
+        lockCurs();
 
         // set data if needed
         if (rotationSpeedY == 0) { rotationSpeedY = rotationSpeedGlobal; }
