@@ -17,7 +17,7 @@ public class M_playerRotation : M_Manager
     private Transform cameraPos;
     private float targetRotationY;
     private float targetRotationX;
-    private bool isMouseLocked = true;
+    public bool isMouseUnlocked = true;
     private float oldTargetRotation;
     private float coordRotation;
 
@@ -53,7 +53,7 @@ public class M_playerRotation : M_Manager
     // Update is called once per frame
     void Update()
     {
-        if (isMouseLocked)
+        if (isMouseUnlocked)
         {
             // === apply roatation to player ===
             // get input on X axis
@@ -95,8 +95,8 @@ public class M_playerRotation : M_Manager
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Cursor.lockState == CursorLockMode.None) { lockCurs(); }
-            else { unlockCurs(); }
+            //if (Cursor.lockState == CursorLockMode.None) { lockCurs(); }
+            //else { unlockCurs(); }
         }
     }
 }

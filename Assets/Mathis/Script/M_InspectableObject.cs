@@ -14,9 +14,26 @@ namespace Assets.Mathis.Script
 
         public override void Interact()
         {
-            Debug.Log("Montre l'UI !!");
-            Debug.Log(inspectionWindowRef);
-            inspectionWindowRef.SetActive(true);
+            if(M_GeneralManager.GetManager<M_InspectionWindowManager>().InspecEnabled == false)
+            {
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().objectToInspect.SetActive(true);
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().InspecEnabled = true;
+                M_GeneralManager.GetManager<M_playerRotation>().isMouseUnlocked = false;
+
+                inspectionWindowRef.SetActive(true);
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().InspecEnabled = true;
+            }
+            else
+            {
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().objectToInspect.SetActive(false);
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().InspecEnabled = false;
+                M_GeneralManager.GetManager<M_playerRotation>().isMouseUnlocked = true;
+
+                inspectionWindowRef.SetActive(false);
+
+                M_GeneralManager.GetManager<M_InspectionWindowManager>().InspecEnabled = false;
+            }
+            
         }
     }
 }
