@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c58b503c1e5183542aa815cba453bf1d
+guid: 9ef650d7189835c4cbf6c72587289c6f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,12 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Ascenseur
-    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface15
+      name: standardSurface16
     second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   materials:
     materialImportMode: 2
