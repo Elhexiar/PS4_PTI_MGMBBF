@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class ScreenProp : M_InteractableProp
-{
 
-    public  CinemachineVirtualCamera virtualCamera;
+public class BPT_focus : M_InteractableProp
+{
+    public CinemachineVirtualCamera virtualCamera;
     [SerializeField] private bool focused = false;
 
     public override void Interact()
@@ -15,9 +15,10 @@ public class ScreenProp : M_InteractableProp
         {
             virtualCamera.Priority = 0;
             focused = false;
-            
+
             M_GeneralManager.GetManager<M_PlayerMovement>().enabled = true;
-            
+
+            M_GeneralManager.GetManager<M_playerRotation>().lockCurs();
 
         }
         else
@@ -26,8 +27,9 @@ public class ScreenProp : M_InteractableProp
             M_GeneralManager.GetManager<M_PlayerMovement>().enabled = false;
             virtualCamera.Priority = 20;
             focused = true;
-        }
-        
-    }
 
+            M_GeneralManager.GetManager<M_playerRotation>().unlockCurs();
+        }
+
+    }
 }

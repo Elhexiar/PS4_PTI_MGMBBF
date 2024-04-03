@@ -11,11 +11,15 @@ public class cell : MonoBehaviour
     [SerializeField] private cell OutflowA, OutflowB;
     private bool wichOutput, emptying;
     public bool source;
-    [SerializeField] private Direction direction;
+    private Direction directionA;
+    [SerializeField] private Direction direction, directionB;
     [SerializeField] private bool interactible;
+    [SerializeField] private bool dir;
+
 
     private void Start()
     {
+        directionA = direction;
         if (!interactible)
         {
             Button button = GetComponent<Button>();
@@ -30,38 +34,15 @@ public class cell : MonoBehaviour
     /// </summary>
     public void SwitchDirection()
     {
-        
-        switch (direction)
+        if (dir)
         {
-            case Direction.up:
-                direction = Direction.right; break;
-            case Direction.down:
-                direction = Direction.left; break;
-            case Direction.left:
-                direction = Direction.up; break;
-            case Direction.right:
-                direction = Direction.down; break; 
-
-            case Direction.LeftToUp:
-                direction = Direction.LeftToDown; break;
-            case Direction.LeftToDown:
-                direction = Direction.LeftToUp; break;
-
-            case Direction.UpToLeft:
-                direction = Direction.UpToRight; break;
-            case Direction.UpToRight:
-                direction = Direction.UpToLeft; break;
-
-            case Direction.RightToDown:
-                direction = Direction.RightToUp; break;
-            case Direction.RightToUp:
-                direction = Direction.RightToDown; break;
-
-            case Direction.DownToLeft:
-                direction = Direction.DownToRight; break;
-            case Direction.DownToRight:
-                direction = Direction.DownToLeft; break;
-
+            direction = directionB;
+            dir = false;
+        }
+        else
+        {
+            direction = directionB;
+            dir = true;
         }
 
         if (wichOutput) { wichOutput=false; }
@@ -124,11 +105,11 @@ public class cell : MonoBehaviour
                 FB_filling.fillMethod = Image.FillMethod.Vertical;
                 FB_filling.fillOrigin = 1;
                 break;
-            case Direction.left:
+            case Direction.right:
                 FB_filling.fillMethod = Image.FillMethod.Horizontal;
                 FB_filling.fillOrigin = 0;
                 break;
-            case Direction.right:
+            case Direction.left:
                 FB_filling.fillMethod = Image.FillMethod.Horizontal;
                 FB_filling.fillOrigin = 1;
                 break;
