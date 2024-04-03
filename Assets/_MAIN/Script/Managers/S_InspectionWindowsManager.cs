@@ -2,25 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M_InspectionWindowManager: M_Manager
+public class S_InspectionWindowsManager : S_Manager
 {
-
-    public GameObject uiRef;
+    public GameObject inspectionWindowsUIRef;
     public GameObject objectToInspect;
     public float rotationSpeed;
-    public bool InspecEnabled = false;
+    public bool inspecEnabled = false;
 
     private void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        if (InspecEnabled)
+        if (inspecEnabled)
         {
             objectToInspect.transform.Rotate((Input.GetAxis("Mouse Y") * -rotationSpeed * Time.deltaTime), (Input.GetAxis("Mouse X") * -rotationSpeed * Time.deltaTime), 0, Space.World);
         }
     }
-
 }

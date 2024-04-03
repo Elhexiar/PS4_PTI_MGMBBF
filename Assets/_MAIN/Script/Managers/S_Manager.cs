@@ -1,11 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
-public class BlastDoorPuzzle : M_InteractableProp
+public class S_Manager : MonoBehaviour
 {
-
     
-
 }

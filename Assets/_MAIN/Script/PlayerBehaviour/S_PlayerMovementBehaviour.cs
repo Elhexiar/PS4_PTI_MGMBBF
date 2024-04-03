@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M_PlayerMovement : M_Manager
+public class S_PlayerMovementBehaviour : S_Manager
 {
     [Header(">> References")]
     [SerializeField] Rigidbody rb;
@@ -15,7 +15,7 @@ public class M_PlayerMovement : M_Manager
 
     [Header(">> PlayerMovement")]
     public float maxSpeed;
-    [Range(0f,1f)]public float acceleration , deceleration;
+    [Range(0f, 1f)] public float acceleration, deceleration;
     public float friction;
 
     float currentSpeed;
@@ -23,7 +23,7 @@ public class M_PlayerMovement : M_Manager
     float VectorX;
     float VectorZ;
 
-   
+
 
     private void Awake()
     {
