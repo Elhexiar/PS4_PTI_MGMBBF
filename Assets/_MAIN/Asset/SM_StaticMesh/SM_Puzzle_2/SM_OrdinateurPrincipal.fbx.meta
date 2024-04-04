@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: M_Props_Ordi_Principal
     second: {fileID: -7791486788655378091, guid: e0d80c4ccf57acb45b312630e7fb980f, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SM_Ordinateur_Principal1
+    second: {fileID: 2100000, guid: 4ffd9acbc874cbd47b027884a178ccea, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
