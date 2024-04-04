@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Ordinateur
-    second: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+    second: {fileID: -7791486788655378091, guid: e0d80c4ccf57acb45b312630e7fb980f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
