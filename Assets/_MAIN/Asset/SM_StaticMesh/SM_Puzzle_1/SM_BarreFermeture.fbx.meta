@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb179e4b8ade8e841b4fff7ba7d66b38
+guid: 4ed014b9e864cad45a96b0c27d7e238d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,17 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_MurPortePasserelle
-    second: {fileID: 2100000, guid: e847c4beaede14e47af5f290bf0c3d0f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
+      name: M_BarreFermeture
+    second: {fileID: 2100000, guid: 27bd5b0ec4c743c4fa75a53222764686, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 2
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
