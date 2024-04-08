@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class LightBehavior : MonoBehaviour
 {
-    public bool execute;
-    public bool activated;
+    [SerializeField] private bool execute;
+    [SerializeField] private bool activated;
+    [SerializeField] private int howManyAlarm;
+    private int alarmCount;
     [SerializeField] private Light thisLight;
 
     private IEnumerator FadeIn(float FadeSpeed = 5f)
@@ -38,34 +40,40 @@ public class LightBehavior : MonoBehaviour
     {
         if(activated)
         {
-            FlickerSpeed(1,true);
+            Flickering();
         }
     }
 
 
-    private void FlickerSpeed(float flickerSpeed = 5f, bool isRandom = false,float rangeA = 1f , float rangeB = 10f)
+    private void Flickering(float flickerSpeed = 5f, bool isRandom = false,float rangeA = 1f , float rangeB = 10f)
     {
-        float speed = 0f;
-        if (isRandom)
+        if (howManyAlarm > 0)
         {
-            speed = Random.Range(rangeA, rangeB);
+            float speed = 0f;
+            if (isRandom)
+            {
+                speed = Random.Range(rangeA, rangeB);
+            }
+            else
+            {
+                speed = flickerSpeed;
+            }
+
+            if (thisLight.intensity == 0)
+            {
+                StopAllCoroutines();
+                StartCoroutine(FadeIn(speed));
+            }
+            else if (thisLight.intensity >= 1)
+            {
+                StopAllCoroutines();
+                StartCoroutine(FadeOut(speed));
+                howManyAlarm--;
+            }
         }
         else
         {
-            speed = flickerSpeed;
-        }
-
-        if (thisLight.intensity == 0)
-        {
-            StopAllCoroutines();
-            Debug.Log("test A");
-            StartCoroutine(FadeIn(speed));
-        }
-        else if (thisLight.intensity >= 1)
-        {
-            StopAllCoroutines();
-            Debug.Log("test B");
-            StartCoroutine(FadeOut(speed));
+            activated = false;
         }
     }
 }

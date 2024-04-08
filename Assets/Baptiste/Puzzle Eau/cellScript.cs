@@ -14,6 +14,7 @@ public class cell : MonoBehaviour
     private Direction directionA;
     [SerializeField] private Direction direction, directionB;
     [SerializeField] private bool interactible;
+    [SerializeField] private bool AlarmTrigger;
     [SerializeField] private bool dir;
 
 
@@ -171,7 +172,15 @@ public class cell : MonoBehaviour
         if (!wichOutput) {  Outflow = OutflowA; }
         else {  Outflow = OutflowB;}
 
-        if(fillAmmount >= capacity && !emptying) { emptying = true; switchWaterDirection(); }
+        // is the room filling or emptying
+        if(fillAmmount >= capacity && !emptying) 
+        { 
+            emptying = true; switchWaterDirection();
+            if (AlarmTrigger)
+            {
+                // trigerAlarm once
+            }
+        }
         if(fillAmmount <= 0 && emptying) { emptying = false; switchWaterDirection(); }
 
         if (emptying && fillAmmount > 0)

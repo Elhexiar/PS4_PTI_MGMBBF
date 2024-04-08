@@ -4725,7 +4725,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   execute: 1
   activated: 1
-  alarmCount: 3
   thisLight: {fileID: 734736101}
 --- !u!114 &734736100
 MonoBehaviour:
