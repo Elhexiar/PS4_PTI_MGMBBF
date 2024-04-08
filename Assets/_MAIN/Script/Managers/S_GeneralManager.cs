@@ -28,11 +28,12 @@ public class S_GeneralManager : MonoBehaviour
 
         managers = new List<S_Manager>();
         managers = GetComponents<S_Manager>().ToList();
+        Debug.Log("Test");
         DontDestroyOnLoad(gameObject);
     }
 
-
-    public static T GetManager<T>() where T : S_Manager
+    
+    public static T GetManagerfromGeneral<T>() where T : S_Manager
     {
         foreach (var manager in instance.managers)
         {
@@ -43,5 +44,7 @@ public class S_GeneralManager : MonoBehaviour
         }
         return null;
     }
+
+    
 
 }

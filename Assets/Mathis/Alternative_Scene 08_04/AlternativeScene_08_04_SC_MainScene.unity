@@ -2876,7 +2876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &664410947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4141,7 +4141,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 904174549}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051355904}
+        m_TargetAssemblyTypeName: Assets._MAIN.Script.Puzzles.S_BlastDoorLogic, Assembly-CSharp
+        m_MethodName: TestTopCog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &904174549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,6 +5108,7 @@ GameObject:
   - component: {fileID: 1051355901}
   - component: {fileID: 1051355903}
   - component: {fileID: 1051355902}
+  - component: {fileID: 1051355904}
   m_Layer: 0
   m_Name: Puzzle 1
   m_TagString: Untagged
@@ -5157,6 +5170,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: -1.04, y: 2.89, z: 1.63}
   m_Center: {x: 6.17, y: 0.6, z: 0.25}
+--- !u!114 &1051355904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051355900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b89a13e152fb2ee4f8bc8851394da11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053174387 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7400183dd69175d47a2e61cb2d535e5e, type: 3}
@@ -5497,7 +5522,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105583911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051355904}
+        m_TargetAssemblyTypeName: Assets._MAIN.Script.Puzzles.S_BlastDoorLogic, Assembly-CSharp
+        m_MethodName: TestTopCog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105583911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,10 +8156,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a7338305b743a24db0babb858f47833, type: 3}
   m_PrefabInstance: {fileID: 1499083361}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1503070969
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1893515625}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+      propertyPath: m_Name
+      value: SM_Alarme_001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
 --- !u!4 &1503070970 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-  m_PrefabInstance: {fileID: 811593266114151481}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b09cef26d6ab08f4c91aa8408f26775d, type: 3}
+  m_PrefabInstance: {fileID: 1503070969}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1510841204
 GameObject:
@@ -8257,7 +8351,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1526947832}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051355904}
+        m_TargetAssemblyTypeName: Assets._MAIN.Script.Puzzles.S_BlastDoorLogic, Assembly-CSharp
+        m_MethodName: TestTopCog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1526947832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9483,7 +9589,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1781713663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051355904}
+        m_TargetAssemblyTypeName: Assets._MAIN.Script.Puzzles.S_BlastDoorLogic, Assembly-CSharp
+        m_MethodName: TestTopCog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1781713663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12237,7 +12355,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2136777739}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1051355904}
+        m_TargetAssemblyTypeName: Assets._MAIN.Script.Puzzles.S_BlastDoorLogic, Assembly-CSharp
+        m_MethodName: TestTopCog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2136777739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12476,63 +12606,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9114740332029023952}
   m_Enabled: 1
---- !u!1001 &811593266114151481
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1893515625}
-    m_Modifications:
-    - target: {fileID: 6256204345136355946, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_Name
-      value: SM_Alarme_001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6744509981387374800, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9e6b6cfc7af4b6d448d03822c7bd0018, type: 3}
 --- !u!114 &833882345768221641
 MonoBehaviour:
   m_ObjectHideFlags: 3

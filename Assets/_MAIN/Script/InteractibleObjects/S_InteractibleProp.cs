@@ -7,9 +7,9 @@ public abstract class S_InteractableProp : MonoBehaviour
 {
     private S_PlayerInteractionManager playerManager;
 
-    private void Awake()
+    private void Start()
     {
-        playerManager = S_GeneralManager.GetManager<S_PlayerInteractionManager>();
+        playerManager = S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>();
     }
 
 
