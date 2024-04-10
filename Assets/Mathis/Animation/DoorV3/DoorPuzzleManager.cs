@@ -12,19 +12,6 @@ public class DoorPuzzleManager : MonoBehaviour
     public bool cogInHand = false;
     public Animator topCogAnimator, botCogAnimator, overallDoorAnimator, middleBlockAnimator, movingCogAnimator;
 
-     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     public void TopValve()
     {

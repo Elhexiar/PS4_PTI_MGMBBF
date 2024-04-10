@@ -112,11 +112,6 @@ namespace Assets._MAIN.Script.Puzzles
             }
         }
 
-        public void Test(string anim)
-        {
-            movingCogAnimator.Play(anim);
-        }
-
 
     }
 }

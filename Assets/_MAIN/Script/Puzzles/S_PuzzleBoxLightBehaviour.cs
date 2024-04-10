@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class M_LightBehaviour : MonoBehaviour
+public class S_PuzzleBoxLightBehaviour : MonoBehaviour
 {
-
     public Light pointLight;
 
     [SerializeField]
@@ -18,9 +17,9 @@ public class M_LightBehaviour : MonoBehaviour
 
     public void toggleLightON()
     {
-            pointLight.enabled = true;
-            lightIsOn = true;
-        
+        pointLight.enabled = true;
+        lightIsOn = true;
+
     }
 
     public void toggleLightOFF()

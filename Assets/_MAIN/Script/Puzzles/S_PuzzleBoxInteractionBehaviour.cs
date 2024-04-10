@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
+using Cinemachine;
 
-public class S_BlastDoor : S_InteractableProp
+public class S_PuzzleBoxInteractionBehaviour : S_InteractableProp
 {
     public CinemachineVirtualCamera virtualCamera;
     [SerializeField] private bool focused = false;
@@ -12,7 +12,7 @@ public class S_BlastDoor : S_InteractableProp
     {
 
         // TODO : Refactoriser
-        
+
         if (focused)
         {
             virtualCamera.Priority = 0;
@@ -43,6 +43,4 @@ public class S_BlastDoor : S_InteractableProp
             Cursor.lockState = CursorLockMode.Confined;
         }
     }
-
-
 }
