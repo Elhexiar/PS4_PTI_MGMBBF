@@ -8,21 +8,22 @@ public class S_InputTerminalMainComputer : MonoBehaviour
 {
     public List<TextMeshProUGUI> uiCodeRefs;
 
+    public GameObject mainScreen;
+    public GameObject folderScreen;
+
     public int cursorPos = 0;
 
     public string excpectedCode = "1985";
     public string currentCode = "";
 
-    public bool isWaitingForInput = true;
+    public bool isWaitingForInput = false;
 
     void Update()
     {
-
         // TODO : REFACTORISME MOI TOUT LA C'EST N'IMP
-
         if (Input.anyKeyDown && isWaitingForInput)
         {
-            if (IsDigitsOnly(Input.inputString))
+            if (IsDigitsOnly(Input.inputString) && Input.inputString != "")
             {
                 currentCode += Input.inputString;
 
@@ -45,15 +46,21 @@ public class S_InputTerminalMainComputer : MonoBehaviour
                     {
                         Debug.Log("GG!");
                         isWaitingForInput = false;
+                        ShowScreen(mainScreen);
                     }
-
-
                 }
-
             }
         }
+    }
 
+    public void ToggleIsWaitingForInput(bool newState)
+    {
+        isWaitingForInput = newState;
+    }
 
+    public void ShowScreen(GameObject uiRef)
+    {
+        uiRef.SetActive(true);
     }
 
     //u jakobbotsch on stackoverflow
