@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_PlafondCouloir
+    second: {fileID: 2100000, guid: cad1798f4930e98478ff9b762635daa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface1
     second: {fileID: -7791486788655378091, guid: e0d80c4ccf57acb45b312630e7fb980f, type: 3}
   materials:

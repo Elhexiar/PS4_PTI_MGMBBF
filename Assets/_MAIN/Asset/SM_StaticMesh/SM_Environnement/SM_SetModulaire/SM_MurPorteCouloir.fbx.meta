@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_MurPorteCouloir
+    second: {fileID: 2100000, guid: a5838b4b5ac6d0f41a41286fd7507bb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface1
     second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
   materials:

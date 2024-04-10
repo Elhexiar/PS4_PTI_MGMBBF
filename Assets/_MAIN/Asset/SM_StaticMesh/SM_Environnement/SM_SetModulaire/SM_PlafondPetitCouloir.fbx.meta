@@ -7,12 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_PlafondPetitCouloir
+    second: {fileID: 2100000, guid: f380e18db3d751f42befb5e533c04a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface1
     second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
