@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6841877389288f4f8f6fe439e3e9b12
+guid: e550b34d70690934b91394214bc7f4ae
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
+      name: M_LivrePostIt
+    second: {fileID: 2100000, guid: de35a17cbc9853a44b6237d6b2a3d7c2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
