@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+
 public class S_PuzzleBoxInteractionBehaviour : S_InteractableProp
 {
     public CinemachineVirtualCamera virtualCamera;
