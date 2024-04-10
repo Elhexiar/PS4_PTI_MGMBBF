@@ -19,6 +19,7 @@ public class OrdinateurDrap : MonoBehaviour
 
     private void Start()
     {
+        flagDisplay.sprite = allFlag[Selection];
         StartCoroutine(PlayCode());
     }
 
