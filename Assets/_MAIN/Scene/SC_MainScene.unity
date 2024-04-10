@@ -1045,7 +1045,17 @@ MonoBehaviour:
   Selection: 0
   flagDisplay: {fileID: 1594304267}
   CodeDisplay: {fileID: 941624489}
-  allFlag: []
+  allFlag:
+  - {fileID: 21300000, guid: bd24977b6eee49842b8af49c9564c3ff, type: 3}
+  - {fileID: 21300000, guid: d9b346d74f3dce049bc41f5ca847ac59, type: 3}
+  - {fileID: 21300000, guid: 14bf0e017860c874c8d62bcca879d472, type: 3}
+  - {fileID: 21300000, guid: 372248de52ce8ea48984c1270ec5deab, type: 3}
+  - {fileID: 21300000, guid: 3105d5a44509f3a4cb79447f3bb51c79, type: 3}
+  - {fileID: 21300000, guid: ea50e008ccf9e244481cd08ea8758f5b, type: 3}
+  - {fileID: 21300000, guid: 2ef52751c5d2c8641a872bbe623a68bd, type: 3}
+  - {fileID: 21300000, guid: bd795fe6638bd454980c8f7700192c7b, type: 3}
+  - {fileID: 21300000, guid: 0822403ed7a036c4e9ec7144edd3d637, type: 3}
+  - {fileID: 21300000, guid: d173a5de6da4a04409e314b1c44c6ce5, type: 3}
   code: 01010000
   on: {r: 0.39569244, g: 0.7169812, b: 0.5814971, a: 1}
   off: {r: 0.091313615, g: 0.11320752, b: 0.10374719, a: 1}
@@ -5924,7 +5934,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 240805208}
         m_TargetAssemblyTypeName: OrdinateurDrap, Assembly-CSharp
         m_MethodName: NextFlag
         m_Mode: 1
@@ -9691,7 +9701,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 240805208}
         m_TargetAssemblyTypeName: OrdinateurDrap, Assembly-CSharp
         m_MethodName: PreviousFlag
         m_Mode: 1
