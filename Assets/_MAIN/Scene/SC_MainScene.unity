@@ -1852,7 +1852,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bd795fe6638bd454980c8f7700192c7b, type: 3}
   - {fileID: 21300000, guid: 0822403ed7a036c4e9ec7144edd3d637, type: 3}
   - {fileID: 21300000, guid: d173a5de6da4a04409e314b1c44c6ce5, type: 3}
-  code: 01010000
+  code: 00000001
   on: {r: 0.39569244, g: 0.7169812, b: 0.5814971, a: 1}
   off: {r: 0.091313615, g: 0.11320752, b: 0.10374719, a: 1}
 --- !u!1001 &240902947
@@ -2618,7 +2618,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8e17564392304044a93698f7d457f394, type: 3}
   - {fileID: 21300000, guid: 61ece9c552941ba47bed3c4916ea7ca5, type: 3}
   - {fileID: 21300000, guid: 92598fc26de8f6e40b861ede0403c84b, type: 3}
-  code: 01010000
+  code: 0000000101
   on: {r: 0.39569244, g: 0.7169812, b: 0.5814971, a: 1}
   off: {r: 0.091313615, g: 0.11320752, b: 0.10374719, a: 1}
 --- !u!1001 &310365329
