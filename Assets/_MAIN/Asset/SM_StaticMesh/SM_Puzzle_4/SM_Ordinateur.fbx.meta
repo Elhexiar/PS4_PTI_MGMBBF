@@ -8,7 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Ordinateur
-    second: {fileID: -7791486788655378091, guid: e45b7d4240d261d45b0e9dd8b90eea88, type: 3}
+    second: {fileID: 2100000, guid: 7834da3be48ef5640921ba1c9dedee07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ordinateur1
+    second: {fileID: 2100000, guid: 7834da3be48ef5640921ba1c9dedee07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ordinateur_Props
+    second: {fileID: 2100000, guid: 6f18b49ef20366b4abcf0c7a2ba30c05, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ordinateur_Props1
+    second: {fileID: 2100000, guid: 6f18b49ef20366b4abcf0c7a2ba30c05, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
