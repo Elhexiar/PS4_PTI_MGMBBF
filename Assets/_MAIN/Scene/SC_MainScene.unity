@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 240805207}
   - component: {fileID: 240805208}
   m_Layer: 0
-  m_Name: Computer
+  m_Name: OrdinateurBehavior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

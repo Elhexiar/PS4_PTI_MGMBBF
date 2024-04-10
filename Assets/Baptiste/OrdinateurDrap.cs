@@ -17,21 +17,23 @@ public class OrdinateurDrap : MonoBehaviour
     private int codeIndex;
 
 
-    public void NextFlag()
-    {
-        if (Selection < allFlag.Length) { Selection++; }
-        else { Selection = 0; }
-    }
-
     private void Start()
     {
         StartCoroutine(PlayCode());
     }
 
+    public void NextFlag()
+    {
+        if (Selection < allFlag.Length - 1) { Selection++; }
+        else { Selection = 0; }
+        flagDisplay.sprite = allFlag[Selection];
+    }
+
     public void PreviousFlag()
     {
         if (Selection > 0) { Selection--; }
-        else { Selection = allFlag.Length; }
+        else { Selection = allFlag.Length - 1; }
+        flagDisplay.sprite = allFlag[Selection];
     }
 
     public bool ChekSelection()
@@ -47,6 +49,7 @@ public class OrdinateurDrap : MonoBehaviour
 
     private IEnumerator flicker()
     {
+        Debug.Log("FLICKERING");
         if(CodeDisplay.color != off)
         {
             CodeDisplay.color = Color.Lerp(on, off, flickerIndex);
@@ -54,29 +57,36 @@ public class OrdinateurDrap : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             StartCoroutine(flicker());
         }
+        else
+        {
+            flickerIndex = 0;
+        }
     }
 
     private IEnumerator PlayCode()
     {
-        Debug.Log(codeIndex);
-        if(codeIndex > code.Length - 1)
+        if(codeIndex < code.Length)
         {
             if (code[codeIndex])
             {
                 CodeDisplay.color = on;
-                new WaitForSeconds(0.2f);
-                flicker();
+                yield return new WaitForSeconds(0.2f);
+                StartCoroutine(flicker());
             }
-            else
+            else if (!code[codeIndex])
             {
                 CodeDisplay.color = on;
-                new WaitForSeconds(1f);
-                flicker();
+                yield return new WaitForSeconds(1f);
+                StartCoroutine(flicker());
             }
-            new WaitForSeconds(2f);
-
+            yield return new WaitForSeconds(1.5f);
             codeIndex++;
         }
-        yield return null;
+        else
+        {
+            codeIndex = 0;
+            yield return new WaitForSeconds(4f);
+        }
+        StartCoroutine(PlayCode());
     }
 }
