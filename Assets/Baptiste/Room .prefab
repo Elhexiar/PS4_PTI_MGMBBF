@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.5896226, b: 0.5896226, a: 0.5254902}
+  m_Color: {r: 1, g: 0.5896226, b: 0.5896226, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -207,9 +207,10 @@ MonoBehaviour:
   OutflowB: {fileID: 0}
   source: 0
   direction: 0
-  directionA: 0
   directionB: 0
   interactible: 0
+  AlarmTrigger: 0
+  dir: 0
 --- !u!114 &1128742806319035610
 MonoBehaviour:
   m_ObjectHideFlags: 0

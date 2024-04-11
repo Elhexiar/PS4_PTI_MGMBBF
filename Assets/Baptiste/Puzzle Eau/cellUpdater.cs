@@ -6,6 +6,9 @@ public class cellUpdater : MonoBehaviour
 {
     public float flowSpeed;
     [SerializeField]private List<cell> map;
+    [SerializeField] private cell[] generator;
+    [SerializeField] private AlarmManager alarms;
+
 
     private void Awake()
     {
@@ -19,6 +22,15 @@ public class cellUpdater : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CellUpdate());
+
+        for(int i = 0; i < generator.Length; i++)
+        {
+            if(!generator[i].alarmTrigered && generator[i].fillAmmount > 98)
+            {
+                Debug.Log("ALARM test A");
+                alarms.triggerAlarm();
+            }
+        }
     }
 
     /// <summary>

@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightBehavior : MonoBehaviour
 {
     [SerializeField] private bool execute;
-    [SerializeField] private bool activated;
+    public bool activated;
     [SerializeField] private int howManyAlarm;
     private int alarmCount;
     [SerializeField] private Light thisLight;

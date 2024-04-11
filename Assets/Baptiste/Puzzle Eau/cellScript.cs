@@ -14,10 +14,10 @@ public class cell : MonoBehaviour
     private Direction directionA;
     [SerializeField] private Direction direction, directionB;
     [SerializeField] private bool interactible;
-    [SerializeField] private bool AlarmTrigger;
+    [SerializeField] public bool alarmTrigger;
     [SerializeField] private bool dir;
 
-
+    public bool alarmTrigered;
     private void Start()
     {
         directionA = direction;
@@ -176,10 +176,6 @@ public class cell : MonoBehaviour
         if(fillAmmount >= capacity && !emptying) 
         { 
             emptying = true; switchWaterDirection();
-            if (AlarmTrigger)
-            {
-                // trigerAlarm once
-            }
         }
         if(fillAmmount <= 0 && emptying) { emptying = false; switchWaterDirection(); }
 
