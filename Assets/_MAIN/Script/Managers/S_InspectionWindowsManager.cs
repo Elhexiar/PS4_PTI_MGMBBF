@@ -20,7 +20,7 @@ public class S_InspectionWindowsManager : S_Manager
     {
         if (inspecEnabled)
         {
-            objectToInspect.transform.Rotate((Input.GetAxis("Mouse Y") * -rotationSpeed * Time.deltaTime), (Input.GetAxis("Mouse X") * -rotationSpeed * Time.deltaTime), 0, Space.World);
+            objectToInspect.transform.Rotate(0, (Input.GetAxis("Mouse X") * -rotationSpeed * Time.deltaTime), (Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime), Space.World);
         }
     }
 
