@@ -9,6 +9,9 @@ public class S_PuzzleBoxLogic : MonoBehaviour
 
     public string currentCode = "";
 
+    [SerializeField]
+    private S_ElevatorButtonBehaviour elevatorButtonRef;
+
     public List<S_PuzzleBoxLightBehaviour> lightList;
     public Animator handleAnimator;
 
@@ -39,6 +42,7 @@ public class S_PuzzleBoxLogic : MonoBehaviour
             handleAnimator.Play("TryNSucceed");
             greenLED.enabled = true;
             redLED.enabled = false;
+            elevatorButtonRef.setBoxPuzzleIsSolved(true);
 
         }
         else
