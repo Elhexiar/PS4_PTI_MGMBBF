@@ -6,6 +6,8 @@ using UnityEngine;
 public class S_BlastDoor : S_InteractableProp
 {
     public CinemachineVirtualCamera virtualCamera;
+    [SerializeField]
+    private S_BlastDoorLogic blastDoorLogic;
     [SerializeField] private bool focused = false;
 
     public override void Interact()
@@ -18,6 +20,10 @@ public class S_BlastDoor : S_InteractableProp
             virtualCamera.Priority = 0;
             toggleFreezePlayer(focused);
             focused = false;
+            if (blastDoorLogic.cogInHand)
+            {
+                blastDoorLogic.TopCogPicked();
+            }
         }
         else
         {

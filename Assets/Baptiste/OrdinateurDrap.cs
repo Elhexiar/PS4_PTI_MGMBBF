@@ -50,7 +50,6 @@ public class OrdinateurDrap : MonoBehaviour
 
     private IEnumerator flicker()
     {
-        Debug.Log("FLICKERING");
         if (CodeDisplay.color != off)
         {
             CodeDisplay.color = Color.Lerp(on, off, flickerIndex);

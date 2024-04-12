@@ -14,6 +14,7 @@ public class S_GeneratorHandleBehaviour : S_InteractableProp
         {
             handleAnimator.Play("TurningPowerOn");
             isPowerOn = true;
+            S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().FinishPuzzle1();
         }
     }
 

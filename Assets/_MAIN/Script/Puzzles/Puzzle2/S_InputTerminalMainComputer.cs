@@ -44,7 +44,7 @@ public class S_InputTerminalMainComputer : MonoBehaviour
                     }
                     else
                     {
-                        Debug.Log("GG!");
+                        S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().FinishPuzzle2();
                         isWaitingForInput = false;
                         ShowScreen(mainScreen);
                     }

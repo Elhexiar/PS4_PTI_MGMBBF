@@ -38,7 +38,6 @@ public class LightBehavior : MonoBehaviour
     {
         if(activated)
         {
-            Debug.Log("TEST ALARM D");
             Flickering();
         }
     }
