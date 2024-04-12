@@ -22,12 +22,12 @@ public class S_PuzzleManager : S_Manager
 
     public void FinishPuzzle3()
     {
-
+        // once elevator room cleared of water
     }
 
     public void FinishPuzzle4()
     {
-
+        // once flag code is found
     }
 
     public void FinishPuzzle5()

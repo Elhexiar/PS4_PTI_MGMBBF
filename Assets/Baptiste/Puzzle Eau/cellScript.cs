@@ -59,8 +59,7 @@ public class cell : MonoBehaviour
         switch (direction)
         {
             case Direction.up:
-                direction = Direction.down;
-                break;
+                direction = Direction.down;break;
             case Direction.down:
                 direction = Direction.up; break;
             case Direction.left:
@@ -101,62 +100,74 @@ public class cell : MonoBehaviour
         switch (direction)
         {
             case Direction.up:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, -90); }
                 FB_filling.fillMethod = Image.FillMethod.Vertical;
                 FB_filling.fillOrigin = 0;
                 break;
             case Direction.down:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 90); }
                 FB_filling.fillMethod = Image.FillMethod.Vertical;
                 FB_filling.fillOrigin = 1;
                 break;
             case Direction.right:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 180); }
                 FB_filling.fillMethod = Image.FillMethod.Horizontal;
                 FB_filling.fillOrigin = 0;
                 break;
             case Direction.left:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 0); }
                 FB_filling.fillMethod = Image.FillMethod.Horizontal;
                 FB_filling.fillOrigin = 1;
                 break;
 
 
             case Direction.LeftToUp:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, -90); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = false;
                 FB_filling.fillOrigin = 1;
                 break;
             case Direction.LeftToDown:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 90); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = true;
                 FB_filling.fillOrigin = 0;
                 break;
 
             case Direction.UpToLeft:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 0); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = true;
                 FB_filling.fillOrigin = 1;
                 break;
             case Direction.UpToRight:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 180); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = false;
                 FB_filling.fillOrigin = 2;
                 break;
 
             case Direction.RightToUp:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, -90); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = true;
                 FB_filling.fillOrigin = 2;
                 break;
             case Direction.RightToDown:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 90); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = false;
                 FB_filling.fillOrigin = 3;
                 break;
 
             case Direction.DownToRight:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 180); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = true;
                 FB_filling.fillOrigin = 3;
                 break;
             case Direction.DownToLeft:
+                if (interactible) { slelectedDir.localEulerAngles = new Vector3(0, 0, 00); }
                 FB_filling.fillMethod = Image.FillMethod.Radial90;
                 FB_filling.fillClockwise = false;
                 FB_filling.fillOrigin = 0;
