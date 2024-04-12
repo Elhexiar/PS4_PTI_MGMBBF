@@ -8,11 +8,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Serrure
-    second: {fileID: 2100000, guid: 27bd5b0ec4c743c4fa75a53222764686, type: 2}
+    second: {fileID: 2100000, guid: 9d1113ced914f9f4b84b40bf08d80701, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
