@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class LightBehavior : MonoBehaviour
 {
-    [SerializeField] private bool execute;
     public bool activated;
     [SerializeField] private int howManyAlarm;
-    private int alarmCount;
     [SerializeField] private Light thisLight;
 
     private IEnumerator FadeIn(float FadeSpeed = 5f)
@@ -40,6 +38,7 @@ public class LightBehavior : MonoBehaviour
     {
         if(activated)
         {
+            Debug.Log("TEST ALARM D");
             Flickering();
         }
     }
@@ -74,6 +73,7 @@ public class LightBehavior : MonoBehaviour
         else
         {
             activated = false;
+            howManyAlarm = 1;
         }
     }
 }

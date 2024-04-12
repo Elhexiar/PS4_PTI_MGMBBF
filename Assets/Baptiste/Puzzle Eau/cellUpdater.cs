@@ -23,14 +23,7 @@ public class cellUpdater : MonoBehaviour
     {
         StartCoroutine(CellUpdate());
 
-        for(int i = 0; i < generator.Length; i++)
-        {
-            if(!generator[i].alarmTrigered && generator[i].fillAmmount > 98)
-            {
-                Debug.Log("ALARM test A");
-                alarms.triggerAlarm();
-            }
-        }
+
     }
 
     /// <summary>
@@ -44,6 +37,14 @@ public class cellUpdater : MonoBehaviour
             if (map[i] != null)
             {
                 map[i].filling();
+            }
+        }
+        for (int i = 0; i < generator.Length; i++)
+        {
+            if (!generator[i].alarmTrigered && generator[i].fillAmmount > 98)
+            {
+                generator[i].alarmTrigered = true;
+                alarms.triggerAlarm();
             }
         }
         yield return new WaitForSeconds(flowSpeed);

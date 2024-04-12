@@ -5,7 +5,13 @@ using UnityEngine;
 public class AlarmManager : MonoBehaviour
 {
     [SerializeField] private LightBehavior[] lights;
-    private int alarmCount;
+    [SerializeField] private int alarmCount = 5;
+    private int alarmsAmmount;
+
+    private void Awake()
+    {
+        alarmsAmmount = alarmCount;
+    }
 
     public void triggerAlarm()
     {
@@ -14,7 +20,7 @@ public class AlarmManager : MonoBehaviour
 
     private IEnumerator playAlarm()
     {
-        if(alarmCount >0)
+        if (alarmCount >0)
         {
             for (int j = 0; j < lights.Length; j++)
             {
@@ -22,6 +28,11 @@ public class AlarmManager : MonoBehaviour
             }
             yield return new WaitForSeconds(1.5f);
             StartCoroutine(playAlarm());
+            alarmCount--;
+        }
+        else
+        {
+            alarmCount = alarmsAmmount;
         }
     }
 }

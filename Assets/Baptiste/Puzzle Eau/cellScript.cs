@@ -16,6 +16,7 @@ public class cell : MonoBehaviour
     [SerializeField] private bool interactible;
     [SerializeField] public bool alarmTrigger;
     [SerializeField] private bool dir;
+    [SerializeField] private RectTransform slelectedDir;
 
     public bool alarmTrigered;
     private void Start()
@@ -58,7 +59,8 @@ public class cell : MonoBehaviour
         switch (direction)
         {
             case Direction.up:
-                direction = Direction.down; break;
+                direction = Direction.down;
+                break;
             case Direction.down:
                 direction = Direction.up; break;
             case Direction.left:
