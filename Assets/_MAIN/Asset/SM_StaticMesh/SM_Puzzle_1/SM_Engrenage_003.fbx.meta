@@ -8,11 +8,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: M_Engrenage_003
-    second: {fileID: 2100000, guid: 27bd5b0ec4c743c4fa75a53222764686, type: 2}
+    second: {fileID: 2100000, guid: e1cb49dff45a3404cb5195c5528fb904, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
