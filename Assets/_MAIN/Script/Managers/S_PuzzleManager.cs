@@ -13,6 +13,9 @@ public class S_PuzzleManager : S_Manager
     private List<GameObject> puzzle4UI;
 
     [SerializeField]
+    private GameObject upperLeftScreenUI, upperRightScreenUI, elevatorSuccesScreen;
+
+    [SerializeField]
     private S_InputTerminalMainComputer inputTerminalScript;
 
 
@@ -34,6 +37,8 @@ public class S_PuzzleManager : S_Manager
         puzzle2IsDone = true;
         Debug.Log("Finished Puzzle 2");
         puzzle3UI.SetActive(true);
+        upperLeftScreenUI.SetActive(true);
+        upperRightScreenUI.SetActive(true);
 
         foreach (var computer in puzzle4UI)
         {
@@ -52,6 +57,7 @@ public class S_PuzzleManager : S_Manager
 
     public void FinishPuzzle4()
     {
+        elevatorSuccesScreen.SetActive(true);
         puzzle4IsDone = true;
         Debug.Log("Finished Puzzle 4");
 
@@ -62,6 +68,7 @@ public class S_PuzzleManager : S_Manager
     {
         puzzle5IsDone = true;
         Debug.Log("Finished Puzzle 5");
+
 
         
         // once the button is pressed open the doors to the elevator;
