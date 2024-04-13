@@ -14,6 +14,9 @@ using UnityEngine;
         public bool isLocked = true;
         public Animator topCogAnimator, botCogAnimator, overallDoorAnimator, middleBlockAnimator, movingCogAnimator;
 
+        [SerializeField]
+        private GameObject doorUi;
+
 
         public void TopValve()
         {
@@ -67,6 +70,7 @@ using UnityEngine;
             else
             {
                 overallDoorAnimator.Play("OuverturePorte");
+                doorUi.SetActive(false);
             }
 
         }
