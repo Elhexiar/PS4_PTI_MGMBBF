@@ -7,6 +7,8 @@ public class S_InspectionWindowsManager : S_Manager
     public GameObject panel;
 
     public GameObject inspectionWindowsUIRef;
+    [SerializeField]
+    private Light inspectionLight;
     public GameObject objectToInspect;
     public float rotationSpeed;
     public bool inspecEnabled = false;
@@ -27,5 +29,6 @@ public class S_InspectionWindowsManager : S_Manager
     public void SetPanelState(bool state)
     {
         panel.SetActive(state);
+        inspectionLight.enabled = state;
     }
 }
