@@ -22,8 +22,6 @@ public class cellUpdater : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CellUpdate());
-
-
     }
 
     /// <summary>

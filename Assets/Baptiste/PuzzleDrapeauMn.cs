@@ -5,27 +5,29 @@ using UnityEngine;
 public class PuzzleDrapeauMn : MonoBehaviour
 {
     [SerializeField] private OrdinateurDrap[] allPC;
-
-    private void Awake()
+    private void Update()
     {
-        allPC = GetComponentsInChildren<OrdinateurDrap>();
+        if(allPC != null)
+        {
+            allPC = GetComponentsInChildren<OrdinateurDrap>();
+        }
     }
 
-    public void StartPuzlle()
+    private void Start()
     {
         StartCoroutine(CheckAwnser());
     }
-
+        
     private IEnumerator CheckAwnser()
     {
         int count = 0;
-        for(int i = 0; i < allPC.Length; i++)
+        for (int i = 0; i < allPC.Length; i++)
         {
-            if (allPC[0].ChekSelection()) { count ++; }
+            if (allPC[i].ChekSelection()) { count ++; }
         }
         if(count == 4)
         {
-            Debug.Log("PUZLLE REUSSI");
+            S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().FinishPuzzle4();
         }
         else
         {

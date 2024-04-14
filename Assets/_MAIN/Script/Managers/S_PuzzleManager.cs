@@ -18,6 +18,7 @@ public class S_PuzzleManager : S_Manager
     [SerializeField]
     private S_InputTerminalMainComputer inputTerminalScript;
 
+    private int elevatorUnlockProgression;
 
     public void FinishPuzzle1()
     {
@@ -51,16 +52,16 @@ public class S_PuzzleManager : S_Manager
     {
         puzzle3IsDone = true;
         Debug.Log("Finished Puzzle 3");
-
+        elevatorUnlockProgression++;
         // once elevator room cleared of water
     }
 
     public void FinishPuzzle4()
     {
-        elevatorSuccesScreen.SetActive(true);
+        //elevatorSuccesScreen.SetActive(true);
         puzzle4IsDone = true;
         Debug.Log("Finished Puzzle 4");
-
+        elevatorUnlockProgression++;
         // once flag code is found
     }
 
