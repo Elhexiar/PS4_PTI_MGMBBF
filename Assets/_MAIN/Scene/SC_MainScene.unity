@@ -26324,6 +26324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f48227d80d4af74dad0fc8be1b6fa70, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: edaa17295304b0d478fa26afe8968a31, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f48227d80d4af74dad0fc8be1b6fa70, type: 3}
       propertyPath: m_Name
       value: SM_SolPasserelle_012
@@ -26689,6 +26693,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f48227d80d4af74dad0fc8be1b6fa70, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87da662093d2dac449899a2dac03f898, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f48227d80d4af74dad0fc8be1b6fa70, type: 3}
       propertyPath: m_Name
       value: SM_SolPasserelle_016
