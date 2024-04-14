@@ -28,7 +28,6 @@ public class S_GeneralManager : MonoBehaviour
 
         managers = new List<S_Manager>();
         managers = GetComponents<S_Manager>().ToList();
-        Debug.Log("Test");
         DontDestroyOnLoad(gameObject);
     }
 

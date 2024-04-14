@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class OrdinateurDrap : MonoBehaviour
 {
+    [SerializeField] private AudioSource beep;
     [SerializeField] private int Selection;
     [SerializeField] private Image flagDisplay, CodeDisplay;
     [SerializeField] private Sprite[] allFlag;
@@ -70,12 +71,14 @@ public class OrdinateurDrap : MonoBehaviour
             if (code[codeIndex])
             {
                 CodeDisplay.color = on;
+                beep.volume = 0.8f; beep.pitch = 1.2f; beep.Play();
                 yield return new WaitForSeconds(0.2f);
                 StartCoroutine(flicker());
             }
             else if (!code[codeIndex])
             {
                 CodeDisplay.color = on;
+                beep.volume = 1f; beep.pitch = 0.6f; beep.Play();
                 yield return new WaitForSeconds(1f);
                 StartCoroutine(flicker());
             }
