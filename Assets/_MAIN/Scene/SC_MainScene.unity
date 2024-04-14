@@ -27774,17 +27774,17 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0051903427
+      time: 0
       value: 1
-      inSlope: -2.6010396
-      outSlope: -2.6010396
+      inSlope: 0.062435307
+      outSlope: 0.062435307
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.6280767
     - serializedVersion: 3
-      time: 0.37372297
-      value: 0.3103485
+      time: 0.5441484
+      value: 0.79870605
       inSlope: -0.6502599
       outSlope: -0.6502599
       tangentMode: 0
