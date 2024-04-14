@@ -12,12 +12,14 @@ using UnityEngine;
         public bool bottomPathOpen = false;
         public bool cogInHand = false;
         public bool isLocked = true;
+    public bool puzzleIsDone = false;
         public Animator topCogAnimator, botCogAnimator, overallDoorAnimator, middleBlockAnimator, movingCogAnimator;
 
         [SerializeField]
         private GameObject doorUi;
 
-
+        [SerializeField]
+        private S_BlastDoor blastDoorInteractionBehaviour;
         public void TopValve()
         {
             if (topPathOpen == false)
@@ -70,6 +72,7 @@ using UnityEngine;
             else
             {
                 overallDoorAnimator.Play("OuverturePorte");
+            puzzleIsDone = true;
                 doorUi.SetActive(false);
             }
 

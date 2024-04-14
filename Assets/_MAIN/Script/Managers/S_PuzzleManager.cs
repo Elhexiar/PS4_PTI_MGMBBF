@@ -13,7 +13,10 @@ public class S_PuzzleManager : S_Manager
     private List<GameObject> puzzle4UI;
 
     [SerializeField]
-    private GameObject upperLeftScreenUI, upperRightScreenUI, elevatorSuccesScreen;
+    private GameObject upperLeftScreenUI, upperRightScreenUI, elevatorSuccesScreen, elevatorAccessDenied;
+
+    [SerializeField]
+    private List<Light> lightList;
 
     [SerializeField]
     private S_InputTerminalMainComputer inputTerminalScript;
@@ -29,6 +32,11 @@ public class S_PuzzleManager : S_Manager
         puzzle2UI.SetActive(true);
         puzzle5UI.SetActive(true);
         inputTerminalScript.enabled = true;
+
+        foreach (var light in lightList)
+        {
+            light.enabled = true;
+        }
 
 
     }
@@ -52,16 +60,16 @@ public class S_PuzzleManager : S_Manager
     {
         puzzle3IsDone = true;
         Debug.Log("Finished Puzzle 3");
-        elevatorUnlockProgression++;
+        elevatorAccessDenied.SetActive(true);
+
         // once elevator room cleared of water
     }
 
     public void FinishPuzzle4()
     {
-        //elevatorSuccesScreen.SetActive(true);
+        elevatorSuccesScreen.SetActive(true);
         puzzle4IsDone = true;
         Debug.Log("Finished Puzzle 4");
-        elevatorUnlockProgression++;
         // once flag code is found
     }
 

@@ -17,16 +17,25 @@ public class S_BlastDoor : S_InteractableProp
         
         if (focused)
         {
+            S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().ShowInteractionPrompt();
             virtualCamera.Priority = 0;
+
             toggleFreezePlayer(focused);
             focused = false;
             if (blastDoorLogic.cogInHand)
             {
                 blastDoorLogic.TopCogPicked();
             }
+            if (blastDoorLogic.puzzleIsDone)
+            {
+                S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().HideInteractionPrompt();
+
+                gameObject.GetComponent<S_BlastDoor>().enabled = false;
+            }
         }
         else
         {
+            S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().HideInteractionPrompt();
             virtualCamera.Priority = 20;
             toggleFreezePlayer(focused);
             focused = true;

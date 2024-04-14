@@ -13,6 +13,8 @@ public class S_MainComputerInteraction : S_InteractableProp
     {
         if (focused)
         {
+            S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().ShowInteractionPrompt();
+
             virtualCamera.Priority = 0;
             toggleFreezePlayer(focused);
             focused = false;
@@ -20,6 +22,8 @@ public class S_MainComputerInteraction : S_InteractableProp
         }
         else
         {
+            S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().HideInteractionPrompt();
+
             virtualCamera.Priority = 20;
             toggleFreezePlayer(focused);
             focused = true;

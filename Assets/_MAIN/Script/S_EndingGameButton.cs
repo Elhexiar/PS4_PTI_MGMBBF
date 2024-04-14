@@ -8,7 +8,8 @@ public class S_EndingGameButton : S_InteractableProp
 {
     public override void Interact()
     {
-        if(S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().puzzle5IsDone 
+        if(S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().puzzle5IsDone
+        && S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().puzzle4IsDone
         && S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().puzzle3IsDone)
         {
             SceneManager.LoadScene("SC_VictoryScene");

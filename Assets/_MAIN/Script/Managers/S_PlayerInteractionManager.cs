@@ -5,6 +5,7 @@ using UnityEngine;
 public class S_PlayerInteractionManager : S_Manager
 {
     public S_InteractableProp InRangeFocusableProp = null;
+    public GameObject inetractionPromptUI;
     void Start()
     {
 
@@ -20,5 +21,14 @@ public class S_PlayerInteractionManager : S_Manager
                 InRangeFocusableProp.Interact();
             }
         }
+    }
+
+    public void ShowInteractionPrompt()
+    {
+        inetractionPromptUI.SetActive(true);
+    }
+    public void HideInteractionPrompt()
+    {
+        inetractionPromptUI.SetActive(false);
     }
 }

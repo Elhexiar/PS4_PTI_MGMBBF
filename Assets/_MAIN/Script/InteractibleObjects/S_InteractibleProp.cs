@@ -21,6 +21,7 @@ public abstract class S_InteractableProp : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             playerManager.InRangeFocusableProp = this;
+            playerManager.ShowInteractionPrompt();
         }
     }
 
@@ -31,6 +32,7 @@ public abstract class S_InteractableProp : MonoBehaviour
             if (playerManager.InRangeFocusableProp == this)
             {
                 playerManager.InRangeFocusableProp = null;
+                playerManager.HideInteractionPrompt();
             }
         }
     }
