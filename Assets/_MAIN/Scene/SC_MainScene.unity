@@ -32168,7 +32168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456202417818772013, guid: ae3dfb3cc5a2f4d4ea4e42324e33f217, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.747
+      value: 1.657
       objectReference: {fileID: 0}
     - target: {fileID: 6456202417818772013, guid: ae3dfb3cc5a2f4d4ea4e42324e33f217, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32213,6 +32213,10 @@ PrefabInstance:
     - target: {fileID: 7021278135372856246, guid: ae3dfb3cc5a2f4d4ea4e42324e33f217, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325960744316141055, guid: ae3dfb3cc5a2f4d4ea4e42324e33f217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.159
       objectReference: {fileID: 0}
     - target: {fileID: 7348661981958535376, guid: ae3dfb3cc5a2f4d4ea4e42324e33f217, type: 3}
       propertyPath: m_Camera
