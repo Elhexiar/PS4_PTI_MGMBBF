@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Armoire : MonoBehaviour
 {
+    [SerializeField] private GameObject text;
     [SerializeField] private BoxCollider bcl;
     private bool moving;
 
@@ -14,6 +15,16 @@ public class Armoire : MonoBehaviour
             moving = true;
         }
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        text.SetActive(true);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        text.SetActive(false);
     }
 
     private void Update()

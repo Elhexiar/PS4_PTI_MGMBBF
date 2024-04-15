@@ -5,7 +5,7 @@ using UnityEngine;
 public class cellUpdater : MonoBehaviour
 {
     public float flowSpeed;
-    [SerializeField]private List<cell> map;
+    [SerializeField] private List<cell> map;
     [SerializeField] private cell[] generator;
     [SerializeField] private AlarmManager alarms;
 
