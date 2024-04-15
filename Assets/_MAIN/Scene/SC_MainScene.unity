@@ -19843,7 +19843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d110f499fc5e346bdc1c5c11d428ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowSpeed: 0.2
+  flowSpeed: 0.25
   map: []
   generator:
   - {fileID: 1093682405}
@@ -37492,7 +37492,7 @@ MonoBehaviour:
   backward: 115
   left: 97
   right: 100
-  maxSpeed: 1
+  maxSpeed: 1.5
   acceleration: 0.02
   deceleration: 0.05
   friction: 0.5
