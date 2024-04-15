@@ -17,6 +17,8 @@ public class S_PuzzleManager : S_Manager
 
     [SerializeField]
     private List<Light> lightList;
+    [SerializeField]
+    private List<AudioSource> lightAudioList;
 
     [SerializeField]
     private S_InputTerminalMainComputer inputTerminalScript;
@@ -37,6 +39,13 @@ public class S_PuzzleManager : S_Manager
         {
             light.enabled = true;
         }
+
+        foreach (var lightAudio in lightAudioList)
+        {
+            lightAudio.Play();
+        }
+
+
 
 
     }

@@ -6,6 +6,11 @@ public class S_GeneratorHandleBehaviour : S_InteractableProp
 {
 
     public Animator handleAnimator;
+
+    [SerializeField]
+    private AudioSource leverSound, lightTurningUpSound;
+
+    
     private bool isPowerOn = false;
 
     public override void Interact()
@@ -13,6 +18,8 @@ public class S_GeneratorHandleBehaviour : S_InteractableProp
         if (!isPowerOn)
         {
             handleAnimator.Play("TurningPowerOn");
+            leverSound.Play();
+            lightTurningUpSound.Play();
             isPowerOn = true;
             S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().FinishPuzzle1();
         }

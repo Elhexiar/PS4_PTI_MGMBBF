@@ -16,6 +16,9 @@ public class S_InputTerminalMainComputer : MonoBehaviour
     public string excpectedCode = "1985";
     public string currentCode = "";
 
+    [SerializeField]
+    private AudioSource uiSound, bootUpSound;
+
     public bool isWaitingForInput = false;
 
     void Update()
@@ -29,6 +32,7 @@ public class S_InputTerminalMainComputer : MonoBehaviour
 
 
                 uiCodeRefs[cursorPos].text = Input.inputString;
+                uiSound.Play();
 
                 cursorPos++;
                 if (cursorPos >= 4)
@@ -41,9 +45,11 @@ public class S_InputTerminalMainComputer : MonoBehaviour
                         {
                             codeRef.text = "0";
                         }
+
                     }
                     else
                     {
+                        bootUpSound.Play();
                         S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().FinishPuzzle2();
                         isWaitingForInput = false;
                         ShowScreen(mainScreen);

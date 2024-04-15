@@ -6,6 +6,9 @@ public class S_InspectableObject1 : S_InteractableProp
 {
 
     public GameObject referencedUIGameObject;
+
+    [SerializeField]
+    private AudioSource pickupSound;
     public override void Interact()
     {
 
@@ -13,6 +16,8 @@ public class S_InspectableObject1 : S_InteractableProp
         if (S_GeneralManager.GetManagerfromGeneral<S_InspectionWindowsManager>().inspecEnabled == false)
         {
             // open Inspection window
+            pickupSound.Play();
+
             S_GeneralManager.GetManagerfromGeneral<S_PlayerMovementBehaviour>().Freeze();
             S_GeneralManager.GetManagerfromGeneral<S_PlayerMovementBehaviour>().enabled = false;
 

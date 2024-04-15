@@ -8,6 +8,8 @@ public class LightBehavior : MonoBehaviour
     [SerializeField] private int howManyAlarm;
     [SerializeField] private Light thisLight;
 
+    [SerializeField] private AudioSource alarmSound;
+
     private IEnumerator FadeIn(float FadeSpeed = 5f)
     {
         if(thisLight.intensity < 1)
@@ -60,6 +62,11 @@ public class LightBehavior : MonoBehaviour
             if (thisLight.intensity == 0)
             {
                 StopAllCoroutines();
+                if(alarmSound != null && S_GeneralManager.GetManagerfromGeneral<S_PuzzleManager>().puzzle1IsDone)
+                {
+
+                    alarmSound.Play();
+                }
                 StartCoroutine(FadeIn(speed));
             }
             else if (thisLight.intensity >= 1)

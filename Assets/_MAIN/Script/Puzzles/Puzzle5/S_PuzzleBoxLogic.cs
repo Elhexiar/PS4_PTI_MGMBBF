@@ -12,6 +12,9 @@ public class S_PuzzleBoxLogic : MonoBehaviour
     [SerializeField]
     private S_ElevatorButtonBehaviour elevatorButtonRef;
 
+    [SerializeField]
+    private AudioSource successLeverSound, failureLeverSound;
+
     public List<S_PuzzleBoxLightBehaviour> lightList;
     public Animator handleAnimator;
 
@@ -40,6 +43,7 @@ public class S_PuzzleBoxLogic : MonoBehaviour
         if (currentCode == expectedCode)
         {
             handleAnimator.Play("TryNSucceed");
+            successLeverSound.Play();
             greenLED.enabled = true;
             redLED.enabled = false;
             elevatorButtonRef.setBoxPuzzleIsSolved(true);
@@ -47,6 +51,7 @@ public class S_PuzzleBoxLogic : MonoBehaviour
         }
         else
         {
+            failureLeverSound.Play();
             handleAnimator.Play("FailNReset");
             currentCode = "";
             foreach (S_PuzzleBoxLightBehaviour light in lightList)
