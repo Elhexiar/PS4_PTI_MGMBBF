@@ -30,7 +30,7 @@ public class S_BlastDoor : S_InteractableProp
             {
                 S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().HideInteractionPrompt();
 
-                gameObject.GetComponent<S_BlastDoor>().enabled = false;
+                gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
         else

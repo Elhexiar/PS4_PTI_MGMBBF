@@ -12,8 +12,10 @@ using UnityEngine;
         public bool bottomPathOpen = false;
         public bool cogInHand = false;
         public bool isLocked = true;
-    public bool puzzleIsDone = false;
+        public bool puzzleIsDone = false;
         public Animator topCogAnimator, botCogAnimator, overallDoorAnimator, middleBlockAnimator, movingCogAnimator;
+        [SerializeField]
+        private AudioSource cranck1, cranck2, cranck3, cranck4, cranck5 ,cranck6, doorAudioOpen;
 
         [SerializeField]
         private GameObject doorUi;
@@ -28,11 +30,16 @@ using UnityEngine;
                 {
                     topCogAnimator.Play("EngrennageTopSuccess");
                     movingCogAnimator.Play("TopCogSuccess");
+
+                    cranck4.Play();
+                    cranck5.Play();
                     topPathOpen = true;
                 }
                 else
                 {
                     topCogAnimator.Play("EngrenageEmpty");
+                    cranck5.Play();
+
                 }
             }
         }
@@ -43,13 +50,18 @@ using UnityEngine;
             {
                 if (movingCogOnBot)
                 {
+
                     botCogAnimator.Play("EngrenageBotSuccess");
                     movingCogAnimator.Play("BotCogSuccess");
+                    cranck4.Play();
+                    cranck5.Play();
                     bottomPathOpen = true;
                 }
                 else
                 {
-                    botCogAnimator.Play("Emptyengrenange");
+                    botCogAnimator.Play("EmptyEngrenange");
+                    cranck5.Play();
+
                 }
             }
         }
@@ -61,10 +73,12 @@ using UnityEngine;
                 if (topPathOpen == true && bottomPathOpen == true)
                 {
                     middleBlockAnimator.Play("BarreFermetureOpenSuccess");
+                    cranck6.Play();
                     isLocked = false;
                 }
                 else
                 {
+                    cranck1.Play();
                     middleBlockAnimator.Play("BarreFermetureOpenFailure");
                     overallDoorAnimator.Play("EchecOuverturePorte");
                 }
@@ -72,9 +86,16 @@ using UnityEngine;
             else
             {
                 overallDoorAnimator.Play("OuverturePorte");
-            puzzleIsDone = true;
+                doorAudioOpen.Play();
+                puzzleIsDone = true;
                 doorUi.SetActive(false);
-            }
+                if (cogInHand)
+                {
+                movingCogAnimator.Play("TopCogPlaced");
+                cranck2.Play();
+
+                }
+        }
 
         }
 
@@ -84,6 +105,8 @@ using UnityEngine;
             if (cogInHand == true)
             {
                 movingCogAnimator.Play("BotCogPlaced");
+                cranck2.Play();
+
                 cogInHand = false;
                 movingCogOnBot = true;
             }
@@ -92,6 +115,7 @@ using UnityEngine;
                 if (movingCogOnBot)
                 {
                     movingCogAnimator.Play("BotCogPicked");
+                    cranck3.Play();
                     cogInHand = true;
                     movingCogOnBot = false;
                 }
@@ -104,6 +128,7 @@ using UnityEngine;
             if (cogInHand == true)
             {
                 movingCogAnimator.Play("TopCogPlaced");
+                cranck2.Play();
                 cogInHand = false;
                 movingCogOnTop = true;
             }
@@ -112,6 +137,7 @@ using UnityEngine;
                 if (movingCogOnTop)
                 {
                     movingCogAnimator.Play("TopCogPicked");
+                    cranck3.Play();
                     cogInHand = true;
                     movingCogOnTop = false;
                 }
