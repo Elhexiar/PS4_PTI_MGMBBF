@@ -10,7 +10,7 @@ public class S_PuzzleManager : S_Manager
     [SerializeField]
     private GameObject  puzzle2UI, puzzle3UI, puzzle5UI;
     [SerializeField]
-    private List<GameObject> puzzle4UI;
+    private List<GameObject> puzzle4UI, deckComputersUIs;
 
     [SerializeField]
     private GameObject upperLeftScreenUI, upperRightScreenUI, elevatorSuccesScreen, elevatorAccessDenied;
@@ -61,6 +61,10 @@ public class S_PuzzleManager : S_Manager
         foreach (var computer in puzzle4UI)
         {
             computer.SetActive(true);
+        }
+        foreach (var uiElement in deckComputersUIs)
+        {
+            uiElement.SetActive(true);
         }
 
     }
