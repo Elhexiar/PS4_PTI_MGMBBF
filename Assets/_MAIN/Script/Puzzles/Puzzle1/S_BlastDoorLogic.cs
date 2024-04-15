@@ -89,6 +89,7 @@ using UnityEngine;
                 doorAudioOpen.Play();
                 puzzleIsDone = true;
                 doorUi.SetActive(false);
+                S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().InRangeFocusableProp.Interact();
                 S_GeneralManager.GetManagerfromGeneral<S_PlayerInteractionManager>().InRangeFocusableProp = null;
                 if (cogInHand)
                 {
