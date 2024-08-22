@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_MAIN/Scene/SC_VictoryScene.unity
     guid: 3e9ee066df8022c4cb5edc6cf2ceb8e7
+  - enabled: 1
+    path: Assets/_MAIN/Scene/SC_FailureScene.unity
+    guid: 7b4fedebbd9f74741b3456b77934628f
   m_configObjects: {}
